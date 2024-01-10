@@ -1,0 +1,12 @@
+{
+  "name": "Auto Note Rater",
+  "description": "Rate CommunityNotes Auto",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "permissions": ["tabs", "webNavigation", "activeTab","scripting"],
+  "host_permissions": ["https://twitter.com/*"]
+}
