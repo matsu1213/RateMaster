@@ -1,6 +1,6 @@
 {
-  "name": "Auto Note Rater",
-  "description": "Rate CommunityNotes Auto",
+  "name": "RateMaster",
+  "description": "A Chrome extension that Semi-automatically rates community notes.",
   "version": "1.0",
   "manifest_version": 3,
   "background": {
