@@ -1,12 +1,27 @@
 {
   "name": "RateMaster",
   "description": "A Chrome extension that Semi-automatically rates community notes.",
-  "version": "1.0",
+  "version": "2.0",
   "manifest_version": 3,
   "background": {
     "service_worker": "background.js",
     "type": "module"
   },
-  "permissions": ["tabs", "webNavigation", "activeTab","scripting", "webRequest"],
-  "host_permissions": ["https://twitter.com/i/birdwatch/*"]
+  "commands": {
+    "rateNote": {
+      "suggested_key": {
+        "default": "Alt+X",
+        "mac": "Alt+X"
+      },
+      "description": "Rate First Note as Helpful"
+    }
+  },
+  "permissions": ["tabs", "webNavigation", "activeTab","scripting", "webRequest", "commands", "storage"],
+  "host_permissions": ["https://twitter.com/i/birdwatch/*"],
+  "web_accessible_resources": [
+    {
+      "resources": ["injected.js"],
+      "matches": ["https://twitter.com/*"]
+    }
+  ]
 }
