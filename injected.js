@@ -52,7 +52,7 @@ var monkeyPatch = () => {
             noteDataArray = []
             json = JSON.parse(this.responseText)
             profile = json.data.birdwatch_note_by_rest_id.birdwatch_profile
-            created_at = note.created_at
+            created_at = json.data.birdwatch_note_by_rest_id.created_at
             alias = profile.alias
             writingImpacts = profile.notes_count.currently_rated_helpful - profile.notes_count.currently_rated_not_helpful
             ratingImpacts = profile.ratings_count.successful.total - profile.ratings_count.unsuccessful.total - profile.ratings_count.unsuccessful.not_helpful_count
